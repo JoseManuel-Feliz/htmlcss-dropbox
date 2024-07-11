@@ -21,6 +21,7 @@ body {
 .container {
     margin: 0 auto;
     height: 100%;
+    width: 1300px;
     border: dashed black 2px;
 
 
@@ -31,13 +32,13 @@ img {
     vertical-align: bottom;
 }
 
-ul {
+.area-link ul {
     list-style-type: none;
     display: inline-block;
 
 }
 
-li {
+.area-link li {
     display: inline;
     list-style: none;
 
@@ -72,4 +73,20 @@ header {
 
 .left {
     flex-basis: 40%;
+}
+
+.row {
+    width: 100%;
+    flex-wrap: wrap;
+    border: dashed #0000ff 3px;
+    gap: 30px;
+}
+
+.col {
+    flex-basis: calc(100% / 3 - 60px / 3);
+    border: dashed #ff0000 3px;
+}
+
+.col.full {
+    flex-grow: 1;
 }
