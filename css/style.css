@@ -1,57 +1,137 @@
+/* Custom Properties*/
+:root {}
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 24px;
+
 }
 
-body {
-    padding: 100px 0;
+/* Generics */
+body {}
+
+header {
+    padding-top: 100px;
+    background-color: #B4D0E7;
 }
 
+h1 {
+    font-size: 4rem;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+}
+
+li {
+    display: inline;
+
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Utils */
 .flex {
     display: flex;
 }
 
-.primo {
+/* Layout */
+/* .row {
+    display: flex;
+
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; 
 
+}*/
+
+/* Buttons */
+.btn-big {
+    background-color: #0061FF;
+    padding: 10px 5px;
+    color: #ffffff;
+    display: inline-block;
+    margin: 35px 0;
 }
+
+.btn-small {
+    background-color: #0061FF;
+    padding: 5px 10px;
+    color: #ffffff;
+    display: block;
+}
+
+/* Spacing */
+.mr-30 {
+    margin-right: 30px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.container-big {
+
+    /*  margin: 0 auto;
+    height: 100%;
+
+    border: dashed black 2px;
+    */
+}
+
 
 .container {
     margin: 0 auto;
-    height: 100%;
+    height: 650px;
     width: 1300px;
-    border: dashed black 2px;
+
 
 
 }
 
 img {
     max-width: 100%;
-    vertical-align: bottom;
-}
-
-.area-link ul {
-    list-style-type: none;
-    display: inline-block;
 
 }
 
-.area-link li {
-    display: inline;
-    list-style: none;
+#nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-menu ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 
 }
 
-.nav-bar {
+
+
+
+
+
+
+#nav-menu {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    border: dashed black 2px;
     height: 80px;
-    margin: auto;
+    background-color: #ffffff;
+    padding: 0 40px;
 
 }
 
@@ -67,15 +147,15 @@ header {
 
 }
 
-.right {
-    flex-basis: 60%;
+.col-70 {
+    flex-basis: 70%;
 }
 
-.left {
-    flex-basis: 40%;
+.col-30 {
+    flex-basis: 30%;
 }
 
-.row {
+.row-2 {
     width: 100%;
     flex-wrap: wrap;
     border: dashed #0000ff 3px;
