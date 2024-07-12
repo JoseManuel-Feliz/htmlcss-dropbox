@@ -44,7 +44,7 @@ img {
 
 }
 
-nav {
+.nav-bar {
     position: fixed;
     top: 0;
     right: 0;
@@ -89,4 +89,30 @@ header {
 
 .col.full {
     flex-grow: 1;
+}
+
+.team-left>*,
+.team-right>* {
+    height: 300px;
+    width: 300px;
+    background-color: coral;
+    border: dashed 2px;
+
+}
+
+.team-left,
+.team-right {
+    flex-wrap: wrap;
+}
+
+.team-right {
+    justify-content: flex-end;
+}
+
+.team>* {
+    flex-basis: calc(100% / 2);
+}
+
+.nav-footer {
+    justify-content: space-between;
 }
