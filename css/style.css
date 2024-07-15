@@ -1,5 +1,16 @@
 /* Custom Properties*/
-:root {}
+:root {
+    --elfin-games: #a2d39b;
+    --plum-cheese: #61082B;
+    --tomb-blue: #0093ce;
+    --red: #ff0000;
+    --Featherbed: #b4d0e7;
+    --dark-blue: #0D2481;
+    --yellow: #ffff00;
+    --light-grey: lightgrey;
+    --grey: grey;
+    --blue: #0061FF;
+}
 
 /* Reset */
 * {
@@ -11,12 +22,7 @@
 }
 
 /* Generics */
-body {}
 
-header {
-
-    background-color: #B4D0E7;
-}
 
 h1 {
     font-size: 4rem;
@@ -37,6 +43,9 @@ ul {
 
 }
 
+li {
+    margin-bottom: 15px;
+}
 
 
 a {
@@ -53,12 +62,37 @@ a {
     text-align: center;
 }
 
+.container {
+    margin: 0 auto;
+
+    max-width: 1300px;
+
+}
+
+.small-container {
+    height: 300px;
+    max-width: 1300px;
+    margin: 70px auto;
+}
+
+.img-fluid {
+    max-width: 100%;
+    display: block;
+}
+
+.text-decoration {
+    text-decoration: underline var(--blue);
+    color: var(--blue);
+}
+
 /* Layout */
 .row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+}
 
+.wrap {
+    flex-wrap: wrap;
 }
 
 .col-70 {
@@ -69,19 +103,19 @@ a {
     flex-basis: 30%;
 }
 
-.container {
-    margin: 0 auto;
-    height: 650px;
-    max-width: 1300px;
+
+.col.full {
+    flex-grow: 1;
 }
 
-.img-fluid {
-    max-width: 100%;
-    display: block;
+.gap {
+    gap: 40px;
+
 }
 
 .border {
-    border: 1px solid black;
+    border: 1px solid var(--light-grey);
+
 }
 
 .border-radius {
@@ -110,7 +144,15 @@ a {
     margin: 35px 0;
 }
 
-.btn-mid {}
+.btn-large {
+    background-color: #0061FF;
+    padding: 10px 0;
+    color: #ffffff;
+    display: inline-block;
+    margin: 35px 0;
+    width: 100%;
+    text-align: center;
+}
 
 .btn-small {
     background-color: #0061FF;
@@ -120,12 +162,24 @@ a {
 }
 
 /* Spacing */
+.w-110 {
+    width: 110px;
+}
+
+.w-60 {
+    width: 60px;
+}
+
 .mr-40 {
     margin-right: 30px;
 }
 
 .mb-50 {
     margin-bottom: 50px;
+}
+
+.m-50 {
+    margin: 50px 0;
 }
 
 .mb-70 {
@@ -161,15 +215,16 @@ a {
     padding: 10px 0
 }
 
-.fa-arrow-down {
-    font-size: 3.5rem;
+.m-30 {
+    margin: 30px 0;
+
 }
 
+.mt-50 {
+    margin-top: 50px;
+}
 
-
-
-
-
+/* heading */
 #nav-menu {
     display: flex;
     justify-content: space-between;
@@ -194,13 +249,19 @@ a {
 
 }
 
-section {
-    min-height: 1300px;
+.fa-arrow-down {
+    font-size: 3.5rem;
+    margin-top: 50px;
 }
 
+section {
+    margin: 50px;
+}
+
+/* plans list */
 #plan-pricing-list .col,
 #features-list .col {
-    flex-basis: calc(100% / 3 - 60px / 3);
+    flex-basis: calc(100% / 3 - 80px / 3);
 
 }
 
@@ -208,62 +269,107 @@ section {
     text-align: center;
 }
 
-.col.full {
-    flex-grow: 1;
+.plan-comparison li {
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
 }
 
-.gap {
-    gap: 30px;
-
-}
 
 
 .col-customer {
-    flex-basis: calc(100% / 3);
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
 }
 
-/* header,
-section {
-    height: 100vh;
 
-}
- */
-.right,
-.left {
-
-    border: dashed black 2px;
-
+/* features  */
+#features-list .col>p {
+    margin-top: 30px;
 }
 
 
 
 
-.col {}
-
-
+/* custumers */
 .col-customer.left,
 .col-customer.right {
     flex-wrap: wrap;
     display: flex;
+
 }
 
 .col-customer.left div,
 .col-customer.right div {
-    background-color: coral;
-    flex-basis: calc(100% / 2);
+    height: 50%;
+    width: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+
 }
 
 .col-customer img {
     filter: invert(1);
-    scale: 0.8;
 }
 
+.col-customer a {
+    display: inline-block;
+    width: 70%;
+}
 
+.col-customer.central img {
+    filter: invert(0);
+}
 
+/* color palette */
+.bg-c.elfin-games {
+    background-color: var(--elfin-games);
+}
+
+.bg-c.plum-cheese {
+    background-color: var(--plum-cheese);
+}
+
+.bg-c.tomb-blue {
+    background-color: var(--tomb-blue);
+}
+
+.bg-c.red {
+    background-color: var(--red);
+}
+
+.bg-c.featherbed {
+    background-color: var(--Featherbed);
+}
+
+.bg-c.dark-blue {
+    background-color: var(--dark-blue);
+}
+
+.bg-c.yellow {
+    background-color: var(--yellow);
+}
+
+.c-grey {
+    color: var(--grey);
+}
+
+.c-blue {
+    color: var(--blue)
+}
+
+.bg-c.black {
+    background-color: #000000;
+}
+
+/* footer nav bar */
+footer a {
+    color: #ffffff;
+}
 
 .nav-footer {
     justify-content: space-between;
+
 }
