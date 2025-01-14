@@ -50,7 +50,7 @@ li {
 
 a {
     color: #000000;
-    text-decoration: none;
+te
 }
 
 /* Utils */
@@ -231,7 +231,8 @@ a {
     align-items: center;
 }
 
-#nav-menu ul {
+#nav-menu .navbar {
+    height: 100%;
     display: flex;
     align-items: center;
     gap: 30px;
